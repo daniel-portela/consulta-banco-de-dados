@@ -5,8 +5,8 @@ Veja o projeto <a href="https://bancodedadosjs.netlify.app/">Consulta de tabelas
 <p>Este projeto consiste em uma aplicação web para consulta de tabelas em um banco de dados. Ele oferece uma interface amigável para visualização e filtragem de dados de diferentes tabelas, como fornecedores, clientes e transações.</p>
 </div>
 
-![preview](https://github.com/daniel-portela/banco-de-dados/assets/110783805/580ab807-e6e1-48ca-8d14-b1db08e853b9)
-![preview-responsive](https://github.com/daniel-portela/banco-de-dados/assets/110783805/e299d716-fcd3-481a-85aa-c36567f6100f)
+![image](https://github.com/daniel-portela/consulta-banco-de-dados/assets/110783805/5e836db5-2293-402e-9d8d-cabc65e63087)
+![image](https://github.com/daniel-portela/consulta-banco-de-dados/assets/110783805/e05dcd35-d5b7-4e7d-a366-051c7ad10f24)
 
 👨🏼‍💻 <b>Tecnologias Utilizadas:</b>
 
