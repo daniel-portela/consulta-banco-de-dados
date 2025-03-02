@@ -139,10 +139,12 @@ body {
 
 .sql-results {
   position: absolute;
-  top: 45vh; /* Mantém a mesma posição top original */
+  top: 45vh;
+  /* Mantém a mesma posição top original */
   left: 0;
   width: calc(70% - 100% / 25);
-  height: 50vh; /* Mantém a mesma altura original */
+  height: 50vh;
+  /* Mantém a mesma altura original */
   background-color: rgba(245, 245, 245, 0.95);
   padding: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -257,6 +259,7 @@ body {
 
 /* Estilos gerais para mobile */
 @media (max-width: 768px) {
+
   .menu,
   .content {
     width: 100%;
@@ -278,12 +281,14 @@ body {
     width: calc(100% - 20px);
     /* Ajuste para padding */
   }
+
   .filters {
     margin: auto;
   }
 }
 
 @media (max-width: 480px) {
+
   .btn,
   .sql-console textarea {
     width: 100%;
@@ -348,8 +353,8 @@ body {
   }
 }
 
-/* Estilos específicos para dispositivos ainda menores (smartphones) */
 @media (max-width: 480px) {
+
   .menu,
   .content {
     flex-direction: column;

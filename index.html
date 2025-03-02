@@ -1,98 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consulta de Tabelas banco de dados</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="menu">
-        <h5>TABELAS</h5>
-        <ul>
-          <li>
-            <button class="btn" onclick="showTableWithFilters('fornecedores')">
-              Fornecedores
-            </button>
-          </li>
-          <li>
-            <button class="btn" onclick="showTableWithFilters('clientes')">
-              Clientes
-            </button>
-          </li>
-          <li>
-            <button class="btn" onclick="showTableWithFilters('transacoes')">
-              Transações
-            </button>
-          </li>
-          <li>
-            <button class="btn" onclick="toggleConsole()">
-              Terminal de Consulta
-            </button>
-          </li>
-        </ul>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta de Tabelas banco de dados</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-      <div class="content">
-        <div class="table-view">
-          <div id="fornecedores-table" style="display: none">
-            Conteúdo da tabela de Fornecedores
-          </div>
-          <div id="clientes-table" style="display: none">
-            Conteúdo da tabela de Clientes
-          </div>
-          <div id="transacoes-table" style="display: none">
-            Conteúdo da tabela de Transações
-          </div>
-        </div>
-
-        <div class="sql-console" id="sql-console" style="display: none">
-          <textarea placeholder="Digite sua consulta aqui..."></textarea>
-          <button class="close-btn" onclick="toggleConsole()">X</button>
-          <div class="actions">
-            <button class="btn" onclick="executeSQL()">Executar</button>
-            <button class="btn clear-btn" onclick="clearQuery()">Limpar Consulta</button>
-          </div>
-        </div>
-
-        <div class="filters" id="fornecedores-filters" style="display: none">
-          <div class="btn-filters">
-            <button class="btn">Filtrar fornecedores</button>
-            <input
-              type="search"
-              placeholder="Pesquisar fornecedores"
-              id="pesquisarFornecedores"
-              required
-            />
-            <button class="btn" onclick="filtrarFornecedores()">Buscar</button>
-            <button class="btn-red" onclick="limparPesquisa()">Limpar</button>
-            <div id="fornecedores-lista"></div>
-          </div>
-        </div>
-
-        <div class="filters" id="clientes-filters" style="display: none">
-          <input type="text" placeholder="Nome do Cliente" required />
-          <input type="text" placeholder="CPF" />
-          <button class="btn">Filtrar</button>
-        </div>
-
-        <div class="filters" id="transacoes-filters" style="display: none">
-          <input type="date" placeholder="Data" required />
-          <button class="btn">Filtrar</button>
-        </div>
-
-        <div class="sql-results" id="sql-results" style="display: none">
-          <div class="resize-handle"></div>
-        </div>
-
-        <button class="btn print-btn" onclick="openFileManager()">
-          Exportar Arquivo
-        </button>
-      </div>
+<body>
+  <div class="container">
+    <div class="menu">
+      <h5>Consulta e Tabela de Banco de Dados</h5>
+      <ul>
+        <li>
+          <button class="btn" onclick="showTableWithFilters('fornecedores')">
+            Fornecedores
+          </button>
+        </li>
+        <li>
+          <button class="btn" onclick="showTableWithFilters('clientes')">
+            Clientes
+          </button>
+        </li>
+        <li>
+          <button class="btn" onclick="showTableWithFilters('transacoes')">
+            Transações
+          </button>
+        </li>
+        <li>
+          <button class="btn" onclick="toggleConsole()">
+            Terminal de Consulta
+          </button>
+        </li>
+      </ul>
     </div>
 
-    <script src="js/script.js"></script>
-  </body>
+    <div class="content">
+      <div class="table-view">
+        <div id="fornecedores-table" style="display: none">
+          Conteúdo da tabela de Fornecedores
+        </div>
+        <div id="clientes-table" style="display: none">
+          Conteúdo da tabela de Clientes
+        </div>
+        <div id="transacoes-table" style="display: none">
+          Conteúdo da tabela de Transações
+        </div>
+      </div>
+
+      <div class="sql-console" id="sql-console" style="display: none">
+        <textarea placeholder="Digite sua consulta"></textarea>
+        <button class="close-btn" onclick="toggleConsole()">X</button>
+        <div class="actions">
+          <button class="btn" onclick="executeSQL()">Executar</button>
+          <button class="btn clear-btn" onclick="clearQuery()">Limpar Consulta</button>
+        </div>
+      </div>
+
+      <div class="filters" id="fornecedores-filters" style="display: none">
+        <div class="btn-filters">
+          <button class="btn">Filtrar fornecedores</button>
+          <input type="search" placeholder="Pesquisar fornecedores" id="pesquisarFornecedores" required />
+          <button class="btn" onclick="filtrarFornecedores()">Buscar</button>
+          <button class="btn-red" onclick="limparPesquisa()">Limpar</button>
+          <div id="fornecedores-lista"></div>
+        </div>
+      </div>
+
+      <div class="filters" id="clientes-filters" style="display: none">
+        <input type="text" placeholder="Nome do Cliente" required />
+        <input type="text" placeholder="CPF" />
+        <button class="btn">Filtrar</button>
+      </div>
+
+      <div class="filters" id="transacoes-filters" style="display: none">
+        <input type="date" placeholder="Data" required />
+        <button class="btn">Filtrar</button>
+      </div>
+
+      <div class="sql-results" id="sql-results" style="display: none">
+        <div class="resize-handle"></div>
+      </div>
+
+      <button class="btn print-btn" onclick="openFileManager()">
+        Exportar Arquivo
+      </button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
